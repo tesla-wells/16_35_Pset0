@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char ** parameters){
+int main(int argc, char** parameters){
 
 	//check to make sure you have the right number of arguments. Remember that the file name counts as 1 argument
 	
