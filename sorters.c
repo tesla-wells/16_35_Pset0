@@ -56,4 +56,12 @@ void bogo_sort (int argc, char **args){
 	}
 }
 
-
+void insert_sort (int argc, char **args){
+	for(int i = 0; i < argc; i++){
+		int j = i;
+		while(j > 0 && (strcmp(args[j],args[j-1]) > 0)){
+			swap(&args[j], &args[j-1]);
+			j -= 1;
+		} 
+	}	
+}

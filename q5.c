@@ -33,11 +33,12 @@ void free_copied_array (int size, char **copied_array);
 } sorting_methods;
 
 // Vector of methods - Add your method here!
-#define N_SORTERS 2
+#define N_SORTERS 3
   sorting_methods sorters[N_SORTERS] =
 {
   {"bubble", bubble_sort},
-  {"bogo", bogo_sort}
+  {"bogo", bogo_sort},
+  {"insert", insert_sort}
 };
 
 
