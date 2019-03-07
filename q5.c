@@ -53,35 +53,28 @@ int main (int argc, char **argv){
   
 	printf ("----------------------------------------------------\n");
   
-	for (int requested_sorter = 1; requested_sorter < argc; requested_sorter++){
-      
-		for (int sorter_idx = 0; sorter_idx < N_SORTERS; sorter_idx++){
+	for (int sorter_idx = 0; sorter_idx < N_SORTERS; sorter_idx++){
 	  
-			if (strcmp (argv[requested_sorter], sorters[sorter_idx].name) == 0){
 	      
-				char **copied_array = get_copied_array (N_ELEMENTS, data);
+			char **copied_array = get_copied_array (argc-1, argv);
 	      
-				clock_t start_time = clock ();
+			clock_t start_time = clock ();
 	      
-				sorters[sorter_idx].fnc (N_ELEMENTS, copied_array);
+			sorters[sorter_idx].fnc (argc-1, copied_array);
 	      
-				clock_t end_time = clock ();
+			clock_t end_time = clock ();
 	      
-				double time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC * 1000;
+			double time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC * 1000;
 	      
-				bool correct = sorted_correctly (N_ELEMENTS, copied_array);
+			bool correct = sorted_correctly (argc-1, copied_array);
 	      
-				print_line (sorters[sorter_idx].name, time, correct);
+			print_line (sorters[sorter_idx].name, time, correct);
 	      
-				free_copied_array (N_ELEMENTS, copied_array);
+			free_copied_array (argc-1, copied_array);
 	      
-				break;
-	    
-			}
-	
-		}
-    
+			   
 	}
+    
   
 	printf ("----------------------------------------------------\n");
 	return 0;
