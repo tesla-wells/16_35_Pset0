@@ -9,8 +9,8 @@ int main(int argc, char** parameters){
 		printf("Too few arguments. Please give paramters <number> <operator> <number");
 	}
 
-	printf("Parameter 1 is %s \n", parameters[1]);
-	printf("Parameter 2 is %s \n", parameters[3]);
+//	printf("Parameter 1 is %s \n", parameters[1]);
+//	printf("Parameter 2 is %s \n", parameters[3]);
 	
 	//convert the numerical arguments from strings to numbers
 	float flone = atof(parameters[1]);
@@ -19,9 +19,9 @@ int main(int argc, char** parameters){
 
 	//maybe add something here to make sure that the operation provided isn't larger than 1 char
 
-	printf("converted float %.3f \n", flone);
-	printf("converted float 2 %.3f \n", fltwo);
-	printf("operation %c", operation);
+//	printf("converted float %.3f \n", flone);
+//	printf("converted float 2 %.3f \n", fltwo);
+//	printf("operation %c", operation);
 	
 	//use a switch statement to figure out which of the 
 	switch(operation){
