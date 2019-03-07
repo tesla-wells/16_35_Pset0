@@ -11,7 +11,7 @@ typedef struct Node {
 } node; 
 
 void insert(node* root, char* str) {
-	if(strcmp(root->item, str) > 0){
+	if(strcmp(root->item, str) < 0){
 		if(root->upper == NULL){
 			node* newNode = malloc(sizeof(node));
 			newNode->upper = NULL;
