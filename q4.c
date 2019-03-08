@@ -11,7 +11,9 @@ typedef struct Node {
 } node; 
 
 void insert(node* root, char* str) {
+	//check to see in comparison to the current node what the polarit of the new string is
 	if(strcmp(root->item, str) < 0){
+		//If you don't have a have a node add it, else recurse
 		if(root->upper == NULL){
 			node* newNode = malloc(sizeof(node));
 			newNode->upper = NULL;
@@ -35,6 +37,9 @@ void insert(node* root, char* str) {
 }
 
 void print_tree(node* root){
+
+	//this is just recursing and printing in a strategic order	
+
 	if(root->lower != NULL){
 		print_tree(root->lower);
 	} 

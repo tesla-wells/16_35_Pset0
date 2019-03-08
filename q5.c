@@ -4,8 +4,9 @@
 #include <stdbool.h>
 #include <time.h>
 #include "sorters.h"
-// Test data for the algorithms
-// Add more elements, and see how the algorithms scale!
+
+//This is going to be replaced in the new code/not referenced
+
 #define N_ELEMENTS 10
 char *data[N_ELEMENTS] = { "frog", "gerbil", "aardvark", "horse", "zebra", 
 // "monkey","penguin","blesbok","gazelle","nyala",
@@ -38,7 +39,7 @@ void free_copied_array (int size, char **copied_array);
 {
   {"bubble", bubble_sort},
   {"bogo", bogo_sort},
-  {"insert", insert_sort}
+  {"insert", insert_sort} //Added this here for the new sortingn algorithm
 };
 
 
@@ -55,7 +56,7 @@ int main (int argc, char **argv){
   
 	for (int sorter_idx = 0; sorter_idx < N_SORTERS; sorter_idx++){
 	  
-	      
+	      //Removed the two loops so that it just goes through ALL of the sorters and takes the list as an input instead
 			char **copied_array = get_copied_array (argc-1, argv);
 	      
 			clock_t start_time = clock ();

@@ -56,6 +56,9 @@ void bogo_sort (int argc, char **args){
 	}
 }
 
+//NEW SORTING ALGORITHM!!!
+//USES THE SWAP ALGORITHM PROVIDED
+
 void insert_sort (int argc, char **args){
 	for(int i = 0; i < argc; i++){
 		int j = i;
